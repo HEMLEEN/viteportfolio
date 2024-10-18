@@ -133,40 +133,40 @@ const projectData = [
     className: "odd",
     projectTitle: "Online Shopping Platform",
     projectDesc: "An online shopping experience with secure payment options, product filtering, and easy-to-use cart management features.",
-    projectLink: "https://github.com/Deepajha14/Rog-Free",
-    deployedProjectLink: "https://deepajha14.github.io/Rog-Free/",
+    projectLink: "#",
+    deployedProjectLink: "https://bookmyshop.netlify.app/",
     projectImg:shoppingProject
   },
   {
     className: "even",
     projectTitle: "E-Commerce Platform",
     projectDesc: "A feature-rich e-commerce platform offering users a seamless shopping experience with real-time inventory updates.",
-    projectLink: "https://github.com/Deepajha14/Rog-Free",
-    deployedProjectLink: "https://deepajha14.github.io/Rog-Free/",
+      projectLink: "#",
+    deployedProjectLink: "#",
     projectImg: ecommerceProject
   },
   {
     className: "odd",
     projectTitle: "Yoga Website",
     projectDesc: "Transform your living room into a personal yoga studio with this app, offering guided sessions for all skill levels.",
-    projectLink: "https://github.com/Deepajha14/Rog-Free",
-    deployedProjectLink: "https://deepajha14.github.io/Rog-Free/",
+    projectLink: "#",
+    deployedProjectLink: "#",
     projectImg: yogaProject
   },
   {
     className: "even",
     projectTitle: "Gym App",
     projectDesc: "A fitness app that allows users to create personalized workout plans and track their fitness progress over time.",
-    projectLink: "https://github.com/Deepajha14/Rog-Free",
-    deployedProjectLink: "https://deepajha14.github.io/Rog-Free/",
+    projectLink: "#",
+    deployedProjectLink: "#",
     projectImg: gymProject
   },
   {
     className: "odd",
     projectTitle: "Web Templates Collection",
     projectDesc: "A versatile collection of customizable templates for developers, ranging from portfolios to e-commerce sites.",
-    projectLink: "https://github.com/Deepajha14/Rog-Free",
-    deployedProjectLink: "https://deepajha14.github.io/Rog-Free/",
+    projectLink: "#",
+    deployedProjectLink: "#",
     projectImg: webTemplatesProject
   },
 ];

@@ -75,19 +75,20 @@ const  Navbar= () => {
         </ul>
         <div className={click ? "social-links active" : "social-links"}>
           <a
-            href="https://www.linkedin.com/in/deepajha14/"
+            href="https://www.linkedin.com/in/hemleen-francis-a6b144137/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin
               className="social"
+              color='pink'
               size={25}
               style={{ marginRight: "2rem" }}
             />
           </a>
           <a
-            href="https://github.com/Deepajha14"
-            target="_blank"
+            href="#"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub
@@ -97,7 +98,7 @@ const  Navbar= () => {
             />
           </a>
           <a
-            href="https://www.instagram.com/artsydeepa/"
+            href="https://www.instagram.com/hemleen7/"
             target="_blank"
             rel="noopener noreferrer"
           >

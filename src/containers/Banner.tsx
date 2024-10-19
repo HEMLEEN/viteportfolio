@@ -6,41 +6,23 @@ const Banner = ({ id }: any) => {
   return (
     <div className="home" id={id}>
       <div className="content">
-      <div className="name">I'm Hemleen</div>
+      <div className="name">I'm Hemleen ,</div>
         <div className="wrapper">
           <div className="staticTitle">
-            Fullstack
-            <div className="hrLine"></div>
-          </div>
-          <ul className="dynamicTitle">
-            <li>+<span>Developer</span></li>
-          </ul>
-        
-        </div>
-        <a
-            className="btn"
-            href="https://www.linkedin.com/in/deepajha14/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hire Me
-          </a>
-          <div className="name m-2">Known about Freelance</div>
-          <div className="name">
             <Typewriter
               options={{
                 strings: [
                   "Mern Stack",
                   "React Typescript",
-                  "Node Typescript",
+                  "Next Js",
+                  "Vue Js",
+                  "Redux",
+                  "vuex",
+                  "UI designer",
                   "Bootstrap",
                   "Html & Css",
-                  "Next Js",
-                  "Redux",
-                  "Nest Js",
-                  "Vue Js"
-                  
-
+                  "Node Typescript",
+                  "Nest Js"               
                 ],
                 autoStart: true,
                 loop: true, // Loop through the strings
@@ -50,6 +32,19 @@ const Banner = ({ id }: any) => {
               }}
             />          
             </div>
+            <div className="hrLine"></div>
+          <ul className="dynamicTitle">
+            <li>+<span>Developer</span></li>
+          </ul>
+        </div>
+        <a
+            className="btn"
+            href="https://www.linkedin.com/in/hemleen-francis-a6b144137/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="name">Hire me</div>
+          </a>
       </div>
       <div className="mask">
         <img className="bg" src={cartoon} alt="boy-with-laptop" />

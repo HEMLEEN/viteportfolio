@@ -133,7 +133,7 @@ const projectData = [
     className: "odd",
     projectTitle: "Online Shopping Platform",
     projectDesc: "An online shopping experience with secure payment options, product filtering, and easy-to-use cart management features.",
-    projectLink: "#",
+    projectLink: "https://bookmyshop.netlify.app",
     deployedProjectLink: "https://bookmyshop.netlify.app/",
     projectImg:shoppingProject
   },

@@ -34,7 +34,6 @@ const Home = () => {
       <div>
         <Navbar />
         <Banner id="home" />
-        
         {projectData.map((project, index) => {
           console.log('project', project)
           return(

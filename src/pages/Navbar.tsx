@@ -25,7 +25,7 @@ const  Navbar= () => {
           >
             <div className="logo-img">
               <span className="blink">&lt;</span>
-              <span>&#47;</span>D<span className="blink">&gt;</span>
+              <span>&#47;</span>D<span className="blink">ev&gt;</span>
             </div>
           </Link>
         </div>
@@ -37,7 +37,7 @@ const  Navbar= () => {
             <Link
             className="navLink"
               activeClass="active"
-              to="project"
+              to="home"
               spy={true}
               smooth={true}
               duration={30}

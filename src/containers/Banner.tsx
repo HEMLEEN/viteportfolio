@@ -6,14 +6,14 @@ const Banner = ({ id }: any) => {
   return (
     <div className="home" id={id}>
       <div className="content">
-      <div className="name">I'm Hemleen ,</div>
+      <div className="name">I'm Hemleen</div>
         <div className="wrapper">
           <div className="staticTitle">
             <Typewriter
               options={{
                 strings: [
-                  "Full Stack",
                   "Mern Stack",
+                  "React Native App",
                   "React Typescript",
                   "Next Js",
                   "Vue Js",

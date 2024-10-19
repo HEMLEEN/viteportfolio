@@ -37,7 +37,7 @@ const  Navbar= () => {
             <Link
             className="navLink"
               activeClass="active"
-              to="home"
+              to="project"
               spy={true}
               smooth={true}
               duration={30}
@@ -81,7 +81,7 @@ const  Navbar= () => {
           >
             <FaLinkedin
               className="social"
-              color='pink'
+              color={'#a01d65'}
               size={25}
               style={{ marginRight: "2rem" }}
             />

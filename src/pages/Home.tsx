@@ -37,6 +37,7 @@ const Home = () => {
         {projectData.map((project, index) => {
           return(
         <ProjectCard
+        id='project' 
           key={index}  // Assign a unique key for each element
           className={project.className}
           projectTitle={project.projectTitle}
@@ -48,7 +49,7 @@ const Home = () => {
           )})}
         <AboutMe id='about' />
         <SkillCard id='skills' />
-        <Achievement />
+        <Achievement  />
         <ContactForm id='contact' />
         <Footer />
       </div>

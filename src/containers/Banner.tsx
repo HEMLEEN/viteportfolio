@@ -12,6 +12,7 @@ const Banner = ({ id }: any) => {
             <Typewriter
               options={{
                 strings: [
+                  "Full Stack",
                   "Mern Stack",
                   "React Typescript",
                   "Next Js",

@@ -35,7 +35,6 @@ const Home = () => {
         <Navbar />
         <Banner id="home" />
         {projectData.map((project, index) => {
-          console.log('project', project)
           return(
         <ProjectCard
           key={index}  // Assign a unique key for each element

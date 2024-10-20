@@ -25,7 +25,7 @@ const  Navbar= () => {
           >
             <div className="logo-img">
               <span className="blink">&lt;</span>
-              <span>&#47;</span>D<span className="blink">ev&gt;</span>
+              <span>&#47;</span>D<span className="blink">&gt;</span>
             </div>
           </Link>
         </div>

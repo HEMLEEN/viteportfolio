@@ -25,6 +25,10 @@
     width: 100%;
 }
 
+.contact-container ::placeholder {
+    color: #6e234f;
+    opacity: 1; 
+  }
 .contact-wrapper-left {
     width: 450px;
     height: 100%;

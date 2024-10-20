@@ -66,8 +66,8 @@ const ContactForm = ({ id }: { id: string }) => {
       
       <div className="contact-container">
         <img src={cartoon} alt='Hemleen' className="contact-wrapper-left" />
-        
         <form onSubmit={sendEmail} className="contact-wrapper-right">
+        <div className='name'>Send Your Thoughts !</div>
           <input
             id='name'
             type="text"
@@ -76,15 +76,6 @@ const ContactForm = ({ id }: { id: string }) => {
             value={formData.from_name}
             onChange={handleChange}
             autoComplete="name"
-            required
-          />
-          <input
-            id='to_name'
-            type="text"
-            name="to_name"
-            value={formData.to_name}  // Set default value as 'Hemleen'
-            disabled  // Make the field disabled
-            style={{ color: 'lightgray' }}  // Set text color to light gray
             required
           />
           <textarea

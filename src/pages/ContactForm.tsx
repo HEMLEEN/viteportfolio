@@ -67,7 +67,7 @@ const ContactForm = ({ id }: { id: string }) => {
       <div className="contact-container">
         <img src={cartoon} alt='Hemleen' className="contact-wrapper-left" />
         <form onSubmit={sendEmail} className="contact-wrapper-right">
-        <div className='name'>Send Your Thoughts !</div>
+        <h5 >Send Your Thoughts !</h5>
           <input
             id='name'
             type="text"

@@ -4,6 +4,7 @@ import webTemplatesProject from '../assets/develope-gif.gif'
 import ecommerceProject from '../assets/ecommerce-develope.gif'
 import gymProject from '../assets/gym-gif.gif'
 import yogaProject from '../assets/yoga.gif'
+import profile from '../assets/profile7.jpg'
 
 const backgroundImageUrl = 'https://images.wallpaperscraft.com/image/single/man_photographer_roof_146991_3840x2400.jpg';
 
@@ -130,7 +131,23 @@ const achievements = [
 // If you already have some projects, fill the url 
 const projectData = [
   {
+    className: "even",
+    projectTitle: "Gym Website",
+    projectDesc: "A fitness app that allows users to create personalized workout plans and track their fitness progress over time.",
+    projectLink: "https://lcfgym.netlify.app/",
+    deployedProjectLink: "#",
+    projectImg: gymProject
+  },
+  {
     className: "odd",
+    projectTitle: "Web Templates Collection",
+    projectDesc: "A versatile collection of customizable templates for developers, ranging from portfolios to e-commerce sites.",
+    projectLink: "#",
+    deployedProjectLink: "#",
+    projectImg: webTemplatesProject
+  },
+  {
+    className: "even",
     projectTitle: "Online Shopping Platform",
     projectDesc: "An online shopping experience with secure payment options, product filtering, and easy-to-use cart management features.",
     projectLink: "https://bookmyshop.netlify.app",
@@ -153,22 +170,8 @@ const projectData = [
     deployedProjectLink: "#",
     projectImg: yogaProject
   },
-  {
-    className: "even",
-    projectTitle: "Gym App",
-    projectDesc: "A fitness app that allows users to create personalized workout plans and track their fitness progress over time.",
-    projectLink: "#",
-    deployedProjectLink: "#",
-    projectImg: gymProject
-  },
-  {
-    className: "odd",
-    projectTitle: "Web Templates Collection",
-    projectDesc: "A versatile collection of customizable templates for developers, ranging from portfolios to e-commerce sites.",
-    projectLink: "#",
-    deployedProjectLink: "#",
-    projectImg: webTemplatesProject
-  },
+  
+  
 ];
 
 
@@ -190,6 +193,14 @@ const emailConfig = {
   userID: 'XXXXXXXXXXXX',
 };
 
+const AboutMe = [
+  {
+    image: profile,
+    name: "Hemleen"
+  },
+  
+]
+
 export {
   backgroundImageUrl,
   name,
@@ -200,4 +211,5 @@ export {
   projectData,
   aboutMeText,
   emailConfig,
+  AboutMe
 };

@@ -1,5 +1,7 @@
 .about-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 80px 13vw 0 18vw;
     padding-top: 60px;
 }

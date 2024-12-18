@@ -67,7 +67,7 @@ const ContactForm = ({ id }: { id: string }) => {
       <div className="contact-container">
         <img src={cartoon} alt='Hemleen' className="contact-wrapper-left" />
         <form onSubmit={sendEmail} className="contact-wrapper-right">
-        <h5 >Send Your Thoughts !</h5>
+        <h5 >Send Your Thoughts Via Mail !</h5>
           <input
             id='name'
             type="text"
@@ -87,7 +87,7 @@ const ContactForm = ({ id }: { id: string }) => {
             required
           />
           <button className='btn' id='submitBtn' type="submit">
-            Send Message
+            Send Mail
           </button>
         </form>
       </div>

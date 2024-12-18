@@ -33,7 +33,7 @@ const  Navbar= () => {
           className={click ? "nav-menu active" : "nav-menu"}
           onClick={handleCLick}
         >
-          <li>
+          <li >
             <Link
             className="navLink"
               activeClass="active"
@@ -41,6 +41,7 @@ const  Navbar= () => {
               spy={true}
               smooth={true}
               duration={30}
+              onClick={handleCLick}
             >Projects</Link>
           </li>
           <li>
@@ -51,6 +52,7 @@ const  Navbar= () => {
               spy={true}
               smooth={true}
               duration={30}
+              onClick={handleCLick}
             >About</Link>
           </li>
           <li>
@@ -60,6 +62,7 @@ const  Navbar= () => {
               to="skills"
               spy={true}
               smooth={true}
+              onClick={handleCLick}
               duration={30}>Skills</Link>
           </li>
           <li>
@@ -70,6 +73,7 @@ const  Navbar= () => {
               spy={true}
               smooth={true}
               duration={30}
+              onClick={handleCLick}
             >Contact</Link>
           </li>
         </ul>

@@ -1,7 +1,7 @@
 import { SiVisualstudiocode, SiReact, SiBootstrap, SiFigma, SiVitess, SiInsomnia } from "react-icons/si";
 import { TbBrandCss3, TbBrandJavascript, TbBrandHtml5, TbBrandTypescript } from "react-icons/tb";
 import { IoLogoWindows, IoLogoNpm } from "react-icons/io"
-import { FaArrowRight, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 
 const SkillCard = ({ id }: any) => {
@@ -12,51 +12,39 @@ const SkillCard = ({ id }: any) => {
   return (
     <>
       <div className="skill-container" id={id}>
-        <div className="skill-header">"What Skills I Have"</div>
+        <div className="skill-header">
+        <h3>"What Skills I Have"</h3></div>
         <div className="skill-box">
           <h2>Libraries and Frameworks</h2>
           <div className="skillset">
 
             {/* Vite js */}
             <div className="link">
-              <abbr title='SiVitess'><SiVitess className='techLogo' id="viteJS" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://vite.dev/guide/')}><span>Vite js</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='SiVitess'><SiVitess className='techLogo' id="viteJS" onClick={() => handleOnClick('https://vite.dev/guide/')}/></abbr>
             </div>
 
             {/* React */}
             <div className="link">
-              <abbr title='ReactJS'><SiReact className='techLogo' id="react" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://react.dev/learn')}><span>React </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='ReactJS'><SiReact className='techLogo' id="react" onClick={() => handleOnClick('https://react.dev/learn')}/></abbr>
             </div>
 
             {/* React Native */}
             <div className="link">
-              <abbr title='ReactJS'><SiReact className='techLogo'/></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://reactnative.dev/docs/environment-setup')}><span>React Native </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='ReactJS'><SiReact className='techLogo' onClick={() => handleOnClick('https://reactnative.dev/docs/environment-setup')}/></abbr>
             </div>
             
             {/* Git */}
             <div className="link">
-              <abbr title='Git Hub'><FaGithub className='techLogo' id="github" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://docs.google.com/document/d/1JqUdWzOr59666QL9BtPGlCSt91w6CjbedaetleVyntU/edit?usp=sharing')}><span>Git Hub</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='Git Hub'><FaGithub className='techLogo' id="github" onClick={() => handleOnClick('https://docs.google.com/document/d/1JqUdWzOr59666QL9BtPGlCSt91w6CjbedaetleVyntU/edit?usp=sharing')}/></abbr>
             </div>
-
-            {/* Npm */}
-            <div className="link">
-              <abbr title='NPM'><IoLogoNpm className='techLogo' id="npm" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}><span>Npm</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
-            </div>
-
             {/*Bootstrap  */}
             <div className="link">
-              <abbr title='Bootstrap'><SiBootstrap className='techLogo' id="bootstrap" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}><span>Bootstrap</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='Bootstrap'><SiBootstrap className='techLogo' id="bootstrap" onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}/></abbr>
             </div>
 
             {/*TypeScript  */}
             <div className="link">
-              <abbr title='TypeScript'><TbBrandTypescript className='techLogo' id="typescript" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}><span>TypeScript </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='TypeScript'><TbBrandTypescript className='techLogo' id="typescript" onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}/></abbr>
             </div>
           </div>
         </div>
@@ -66,48 +54,45 @@ const SkillCard = ({ id }: any) => {
 
             {/*Html  */}
             <div className="link">
-              <abbr title='Html 5'><TbBrandHtml5 className='techLogo' id="html" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/HTML')}><span>Html </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='Html 5'><TbBrandHtml5 className='techLogo' id="html" onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/HTML')} /></abbr>
             </div>
 
             {/*CSS  */}
             <div className="link">
-              <abbr title='CSS 3'><TbBrandCss3 className='techLogo' id="css" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/CSS')}><span>Css</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='CSS 3'><TbBrandCss3 className='techLogo' id="css" onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/CSS')}/></abbr>
             </div>
 
             {/*JavaScript  */}
             <div className="link">
-              <abbr title='TypeScript'><TbBrandJavascript className='techLogo' id="javascript" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/JavaScript')}><span>JavaScript </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='TypeScript'><TbBrandJavascript className='techLogo' id="javascript" onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/JavaScript')}/></abbr>
             </div>
 
             {/*Figma */}
             <div className="link">
-              <abbr title='Figma'><SiFigma className='techLogo' id="figma" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://www.figma.com/resource-library/design-basics/')}><span>Figma </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+              <abbr title='Figma'><SiFigma className='techLogo' id="figma" onClick={() => handleOnClick('https://www.figma.com/resource-library/design-basics/')}/></abbr>
             </div>
           </div>
         </div>
         <div className="skill-box">
-          <h2>Tools & Systems</h2>
+          <h2>Version Controlls</h2>
           <div className="skillset">
+             {/* Npm */}
+             <div className="link">
+              <abbr title='NPM'><IoLogoNpm className='techLogo' id="npm" onClick={() => handleOnClick('https://react.dev/learnhttps://docs.npmjs.com/about-npm')}/></abbr>
+            </div>
             {/*Vs Code  */}
             <div className="link">
-              <abbr title='Visual Studio Code'><SiVisualstudiocode className='techLogo' id="vscode" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://code.visualstudio.com/download')}><span>VsCode </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+            <SiVisualstudiocode className='techLogo' id="vscode" onClick={() => handleOnClick('https://code.visualstudio.com/download')}/>
             </div>
 
             {/*Windows */}
             <div className="link">
-              <abbr title='Windows'><IoLogoWindows className='techLogo' id="windows" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/API/Window')}><span>Windows </span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+            <IoLogoWindows className='techLogo' id="windows" onClick={() => handleOnClick('https://developer.mozilla.org/en-US/docs/Web/API/Window')}/>
             </div>
 
             {/*Insomnia */}
             <div className="link">
-              <abbr title='Insomnia'><SiInsomnia className='techLogo' id="insomnia" /></abbr>
-              <button className='btn' onClick={() => handleOnClick('https://docs.insomnia.rest/')}><span>Insomnia</span><FaArrowRight className='btn-arrow' size={22} style={{ marginLeft: "1rem" }} /></button>
+            <SiInsomnia className='techLogo' id="insomnia" onClick={() => handleOnClick('https://docs.insomnia.rest/')}/>
             </div>
           </div>
         </div>

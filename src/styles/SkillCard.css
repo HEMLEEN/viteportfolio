@@ -54,6 +54,7 @@ display: flex;
 flex-direction: column;
 text-decoration: none;
 }
+
 @media screen and (max-width: 1040px), (max-height: 550px) {
 
     .skill-container {

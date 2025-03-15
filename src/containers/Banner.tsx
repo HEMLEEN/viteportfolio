@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 
-import cartoon from "../assets/cartoon-compressed.png";
+import cartoon from "../assets/contactme.jpg";
 
 const Banner = ({ id }: any) => {
   return (

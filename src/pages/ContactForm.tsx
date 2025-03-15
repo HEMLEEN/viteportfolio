@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 
-import cartoon from '../assets/cartoon-compressed.png';
+import cartoon from '../assets/contactme.jpg';
 
 const ContactForm = ({ id }: { id: string }) => {
   // State to hold form input values

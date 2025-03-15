@@ -96,11 +96,12 @@ background-color: transparent;
   }
 
 .mask .bg {
-    height: 80vh;
+    height: 90vh;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -3;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 950px) {

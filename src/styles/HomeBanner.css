@@ -98,7 +98,7 @@ background-color: transparent;
 .mask .bg {
     height: 64vh;
     position: absolute;
-    bottom: 13rem;
+    bottom: 8rem;
     right: 0;
     z-index: -3;
     border-radius: 50%;

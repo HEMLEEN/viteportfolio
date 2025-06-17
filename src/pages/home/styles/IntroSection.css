@@ -1,0 +1,77 @@
+.intro-section {
+  background-color: #12032c;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.emoji-img {
+  width: 180px;
+  filter: drop-shadow(0 0 20px #a46bf5);
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.highlight-name {
+  color: #a46bf5;
+  font-weight: 500;
+}
+
+.designer-tag {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+
+}
+
+.cover-word-wrapper {
+  position: relative;
+  display: inline-block;
+  color: #a46bf5;
+}
+
+.cover-word {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-circle {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #a46bf5;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.caption {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+
+}
+
+.software-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.company-tag {
+  font-size: 1rem;
+  color: #ccc;
+}

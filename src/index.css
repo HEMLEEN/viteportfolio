@@ -1,0 +1,30 @@
+.object-fit-cover {
+  object-fit: cover;
+}
+
+html,
+body {
+  height: 100%;
+  background: radial-gradient(ellipse at center, #0f0f1f, #0b0b1a);
+}
+
+
+/* File Css */
+.file-cursor {
+  cursor: pointer;
+}
+
+.spanText {
+  font-size: 12px;
+}
+
+.shadow-gray {
+  filter: drop-shadow(0 0 20px #a46bf5);
+  box-shadow: 0 10px 20px rgba(128, 128, 128, 0.4);
+  /* gray tone */
+}
+
+.project-icon{
+  width:400px;
+  height:300px;
+}

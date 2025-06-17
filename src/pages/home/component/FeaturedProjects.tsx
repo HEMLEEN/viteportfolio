@@ -1,19 +1,5 @@
 import { projectData } from "../../../constant/Constant";
 
-const projects = [
-  {
-    title: 'Templates',
-    description: `A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.`,
-    image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
-  },
-  {
-    title: 'Example Project',
-    description: `A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.`,
-    image: 'https://hemleen7.netlify.app/assets/ecommerce-develope-Dw6wqqzQ.gif',
-  },
-  // Add more projects here...
-];
-
 const FeaturedProjects = () => {
 
   return (

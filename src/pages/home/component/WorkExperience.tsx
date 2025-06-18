@@ -9,28 +9,28 @@ const cardData = [
     id: 1,
     title: 'Website Developement',
     description:
-      'Take your client onboard seamlessly by our amazing tool of digital onboard process.',
+      'Web development is the process of building, programming, and maintaining websites and web applications',
     image: faWebAwesome,
   },
   {
     id: 2,
     title: 'Mobile apps Developement',
     description:
-      'Take your client onboard seamlessly by our amazing tool of digital onboard process.',
+      'Mobile application development is the process of making software for smartphones, tablets and digital assistants, most commonly for the Android and iOS operating systems',
     image: faAppStore,
   },
   {
     id: 3,
-    title: 'Ux/UI Designing',
+    title: 'UX/UI Design',
     description:
-      'Take your client onboard seamlessly by our amazing tool of digital onboard process.',
+      'UI/UX design, in simple terms, is about making digital products, like apps and websites, both attractive and easy to use.',
     image: faDrawPolygon,
   },
   {
     id: 4,
     title: 'Art Work',
     description:
-      'Take your client onboard seamlessly by our amazing tool of digital onboard process.',
+      `I'm an artist at heart❤️. you'll often find me lost in the world of sketches and colors. I really enjoy being creative, so I like to spend my free time drawing, sketching, and painting. It's a great way for me to unwind and tap into my creative side.`,
     image: faArtstation,
   },
 ];

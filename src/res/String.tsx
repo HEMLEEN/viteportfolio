@@ -20,7 +20,7 @@ export const devloperInfo = {
     name: '',
     mail: '',
     phone: "",
-    desc: 'You can reach out to me anytime for any queries, suggestions, or support related to the website.',
+    desc: 'You can reach out to me anytime for any queries, suggestions, or support related to the projects.',
     organization: 'Developer',
     currentOrganization: 'PSG Software Technologies',
     organizationRole: 'FreeLance',

@@ -1,8 +1,18 @@
 import leftUserImage from '../assets/Me-profile-left.png'
+import developeGif from '../assets/develope-gif.gif'
+import templateGif from '../assets/ecommerce-develope.gif'
+import shoppingGif from '../assets/shopping2-gif.gif'
+import yogaGif from '../assets/yoga.gif'
+import gymGif from '../assets/gym-gif.gif'
 
 
 export {
-    leftUserImage
+    leftUserImage,
+    developeGif,
+    templateGif,
+    shoppingGif,
+    yogaGif,
+    gymGif
 }
 
 export const projectData = [
@@ -11,7 +21,7 @@ export const projectData = [
         title: "Gym Website",
         description: "A fitness app that allows users to create personalized workout plans and track their fitness progress over time.",
         projectLink: "https://lcfgym.netlify.app/",
-        image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
+        image: gymGif,
     },
     {
         className: "odd",
@@ -19,7 +29,7 @@ export const projectData = [
         description: "A versatile collection of customizable templates for developers, ranging from portfolios to e-commerce sites.",
         projectLink: "#",
         deployedProjectLink: "#",
-        image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
+        image: templateGif,
     },
     {
         className: "even",
@@ -27,7 +37,7 @@ export const projectData = [
         description: "An online shopping experience with secure payment options, product filtering, and easy-to-use cart management features.",
         projectLink: "https://bookmyshop.netlify.app",
         deployedProjectLink: "https://bookmyshop.netlify.app/",
-        image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
+        image: shoppingGif,
     },
     {
         className: "even",
@@ -35,7 +45,7 @@ export const projectData = [
         description: "A feature-rich e-commerce platform offering users a seamless shopping experience with real-time inventory updates.",
         projectLink: "#",
         deployedProjectLink: "#",
-        image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
+        image: developeGif,
     },
     {
         className: "odd",
@@ -43,7 +53,7 @@ export const projectData = [
         description: "Transform your living room into a personal yoga studio with this app, offering guided sessions for all skill levels.",
         projectLink: "#",
         deployedProjectLink: "#",
-        image: 'https://hemleen7.netlify.app/assets/develope-gif-BaECswnc.gif',
+        image: yogaGif,
     },
 
 

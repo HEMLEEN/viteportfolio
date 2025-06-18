@@ -24,7 +24,7 @@ const TechOrbit = () => {
           I’m currently working on a <span className="text-purple">multi-core</span> platforms
         </h2>
         <p className="text-secondary">
-          that values improving people’s lives through accessible design
+          that values improving people’s lives through accessible project
         </p>
       </div>
 

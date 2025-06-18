@@ -12,8 +12,8 @@
 
 .orbit-wrapper {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 530px;
+  height: 400px;
 }
 
 .orbit-svg {
@@ -46,16 +46,16 @@
 }
 
 /* Manually position icons along arc */
-.orbit-icon-0 { top: 80px; left: 260px; }
+.orbit-icon-0 { top: 130px; left: 260px; }
 .orbit-icon-1 { top: 140px; left: 390px; }
-.orbit-icon-2 { top: 220px; left: 450px; }
+.orbit-icon-2 { top: 220px; left: 380px; }
 .orbit-icon-3 { top: 320px; left: 390px; }
-.orbit-icon-4 { top: 400px; left: 260px; }
+.orbit-icon-4 { top: 380px; left: 260px; }
 .orbit-icon-5 { top: 140px; left: 130px; }
 .orbit-icon-6 { top: 200px; left: 180px; }
 .orbit-icon-7 { top: 350px; left: 130px; }
 .orbit-icon-8 { top: 140px; left: 390px; }
-.orbit-icon-8 { top: 240px; left:90px; }
+.orbit-icon-8 { top: 240px; left:110px; }
 
 
 .glow-center {

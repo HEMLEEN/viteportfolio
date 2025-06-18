@@ -17,13 +17,16 @@ const IntroSection = () => {
                     </Col>
                     <Col md={7} className='align-items-center justify-content-center'>
                         <p className="intro-text">
-                            Hello! I'm <span className="highlight-name">Hemleen</span>
+                            I'm <span className="highlight-name">Hemleen</span>
                         </p>
-                        <p className="designer-tag">A Developer who</p>
+                        <p className="designer-tag"></p>
                         <h1 className="main-title">
-                            Judges a book <br /> by its{' '}
+                            <span className="cover-word-wrapper px-2">
+                              <span className="cover-word">Code </span>
+                            </span>
+                             is like humor. <br /> When you have to explain it  {' '}
                             <span className="cover-word-wrapper">
-                                <span className="cover-word">cover</span>.
+                                <span className="cover-word">it’s bad</span>
                                 <div className="cover-circle"></div>
                             </span>
                         </h1>
@@ -36,34 +39,36 @@ const IntroSection = () => {
 
                 <Row className="text-center mt-5">
                     <Col>
-                    <span>I'm Knowledge with</span>
-                      <h2 className='software-title'>
-                          <Typewriter
-                            options={{
-                                strings: [
-                                    "Mern Stack",
-                                    "React Native App",
-                                    "React Typescript",
-                                    "Next Js",
-                                    "Vue Js",
-                                    "Redux",
-                                    "vuex",
-                                    "UI designer",
-                                    "Bootstrap",
-                                    "Html & Css",
-                                    "Node Typescript",
-                                    "Nest Js"
-                                ],
-                                autoStart: true,
-                                loop: true, // Loop through the strings
-                                delay: 100, // Speed of typing
-                                cursor: "|", // Optional: Customize cursor
-                                deleteSpeed: 50 // Speed of deleting
-                            }}
-                        />
-                      </h2>
                         <p className="company-tag">
-                            Currently, I'm a Software Engineer at {devloperInfo.currentOrganization},
+                            Currently, I'm working at {devloperInfo.currentOrganization} as Software Engineer,
+                        </p>
+                        <h2 className='software-title'>
+                            <Typewriter
+                                options={{
+                                    strings: [
+                                        "Mern Stack",
+                                        "React Native App",
+                                        "React Typescript",
+                                        "Next Js",
+                                        "Vue Js",
+                                        "Redux",
+                                        "vuex",
+                                        "UI designer",
+                                        "Bootstrap",
+                                        "Html & Css",
+                                        "Node Typescript",
+                                        "Nest Js"
+                                    ],
+                                    autoStart: true,
+                                    loop: true, // Loop through the strings
+                                    delay: 100, // Speed of typing
+                                    cursor: "|", // Optional: Customize cursor
+                                    deleteSpeed: 50 // Speed of deleting
+                                }}
+                            />
+                        </h2>
+                        <p className="company-tag">
+                            Developer
                         </p>
                     </Col>
                 </Row>

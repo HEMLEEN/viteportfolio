@@ -1,4 +1,5 @@
 import { projectData } from "../../../constant/Constant";
+import '../styles/FeatureProject.css'
 
 const FeaturedProjects = () => {
 
@@ -15,7 +16,7 @@ const FeaturedProjects = () => {
             </div>
           </div>
 
-          <div className={`col-md-6 text-center ${index % 2 !== 0 ? 'order-md-1' : ''}`}>
+          <div className={`col-md-6 text-center py-2 projectHover ${index % 2 !== 0 ? 'order-md-1' : ''}`}>
             <img src={project.image} alt={project.title} className="img-thumbnail project-icon  rounded-4  object-cover shadow-gray bg-dark border-0" style={{ background: 'linear-gradient(to right,rgb(115, 115, 135), #1f1f3f)' }}/>
           </div>
         </div>

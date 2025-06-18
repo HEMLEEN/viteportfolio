@@ -24,9 +24,9 @@ const IntroSection = () => {
                             <span className="cover-word-wrapper px-2">
                               <span className="cover-word">Code </span>
                             </span>
-                             is like humor. <br /> When you have to explain it  {' '}
+                             <p>is like humor. <br /> When you have to explain it.</p>
                             <span className="cover-word-wrapper">
-                                <span className="cover-word">it’s bad</span>
+                                <span className="cover-word"> its bad</span>
                                 <div className="cover-circle"></div>
                             </span>
                         </h1>

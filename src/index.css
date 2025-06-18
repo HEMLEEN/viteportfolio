@@ -23,3 +23,32 @@ body {
   box-shadow: 0 10px 20px rgba(128, 128, 128, 0.4);
   /* gray tone */
 }
+
+
+@media only screen and (max-width:350px) {
+  .main-title .cover-word {
+    font-size: 1.5rem;
+  }
+
+  .main-title p {
+    font-size: 1.5rem;
+  }
+
+  .title-word {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:475px) {
+  .main-title .cover-word {
+    font-size: 1.5rem;
+  }
+
+  .main-title p {
+    font-size: 1.5rem;
+  }
+
+  .title-word {
+    font-size: 1.5rem;
+  }
+}

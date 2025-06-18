@@ -39,7 +39,7 @@ const WorkExperience = () => {
   return (
     <section className="work-experience py-5 text-white">
       <Container>
-        <h2 className="mb-5 fw-bold section-title text-center">Work Experience</h2>
+        <h2 className="mb-5 fw-bold section-title text-center title-word">Work Experience</h2>
         <Row className="g-4">
           {cardData.map((card:any) => (
             <Col key={card.id} xs={12} md={6}>

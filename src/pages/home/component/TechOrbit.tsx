@@ -1,8 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNode, faVuejs, faGithub, faJs, faFigma, faAngular } from '@fortawesome/free-brands-svg-icons';
+import Typewriter from "typewriter-effect";
+
 import '../styles/TechOrbit.css'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row } from 'react-bootstrap';
+import { devloperInfo } from '../../../res/String';
 
 const techIcons = [
   { icon: faReact, name: 'React' },
@@ -21,14 +25,43 @@ const TechOrbit = () => {
     <section className="tech-orbit-section text-white d-flex flex-column justify-content-center align-items-center">
       <div className="text-center mb-4">
         <h2>
-          I’m currently working on a <span className="text-purple">multi-core</span> platforms
+          I’m currently working on <span className="text-purple fs-4">{devloperInfo.currentOrganization} </span>
         </h2>
         <p className="text-secondary">
-          that values improving people’s lives through accessible project
+          I've  <span className="text-purple">skilled </span> with following  <span className="text-purple">core</span> languages
         </p>
+        <Row className="text-center mt-4">
+          <Col>
+            <h2 className='software-title'>
+              <Typewriter
+                options={{
+                  strings: [
+                    "Mern Stack",
+                    "React Native App",
+                    "React Typescript",
+                    "Next Js",
+                    "Vue Js",
+                    "Redux",
+                    "vuex",
+                    "UI designer",
+                    "Bootstrap",
+                    "Html & Css",
+                    "Node Typescript",
+                    "Nest Js"
+                  ],
+                  autoStart: true,
+                  loop: true, // Loop through the strings
+                  delay: 100, // Speed of typing
+                  cursor: "|", // Optional: Customize cursor
+                  deleteSpeed: 50 // Speed of deleting
+                }}
+              />
+            </h2>
+          </Col>
+        </Row>
       </div>
 
-      <div className="orbit-wrapper position-relative">
+      <div className="orbit-wrapper position-relative mb-8">
         {/* Icons above curves */}
         <div className="icon-arc-wrapper">
           {techIcons.map((item, index) => (

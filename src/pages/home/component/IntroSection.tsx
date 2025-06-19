@@ -1,8 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import Typewriter from "typewriter-effect";
 
 import { leftUserImage } from '../../../constant/Constant'
-import { devloperInfo } from '../../../res/String';
+
 const IntroSection = () => {
     return (
         <section className="intro-section text-white" >
@@ -32,43 +31,6 @@ const IntroSection = () => {
                         </h1>
                         <p className="caption">
                             Because if the cover does not impress you what else can?
-                        </p>
-                    </Col>
-                </Row>
-
-
-                <Row className="text-center mt-5">
-                    <Col>
-                        <p className="company-tag">
-                            Currently, I'm working at {devloperInfo.currentOrganization} as Software Engineer,
-                        </p>
-                        <h2 className='software-title'>
-                            <Typewriter
-                                options={{
-                                    strings: [
-                                        "Mern Stack",
-                                        "React Native App",
-                                        "React Typescript",
-                                        "Next Js",
-                                        "Vue Js",
-                                        "Redux",
-                                        "vuex",
-                                        "UI designer",
-                                        "Bootstrap",
-                                        "Html & Css",
-                                        "Node Typescript",
-                                        "Nest Js"
-                                    ],
-                                    autoStart: true,
-                                    loop: true, // Loop through the strings
-                                    delay: 100, // Speed of typing
-                                    cursor: "|", // Optional: Customize cursor
-                                    deleteSpeed: 50 // Speed of deleting
-                                }}
-                            />
-                        </h2>
-                        <p className="company-tag">
-                            Developer
                         </p>
                     </Col>
                 </Row>

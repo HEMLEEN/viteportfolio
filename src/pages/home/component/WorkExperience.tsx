@@ -9,7 +9,7 @@ const cardData = [
     id: 1,
     title: 'Website Developement',
     description:
-      'Web development is the process of building, programming, and maintaining websites and web applications',
+      'Web developement is the process of building, programming, and maintaining websites and web applications',
     image: faWebAwesome,
   },
   {

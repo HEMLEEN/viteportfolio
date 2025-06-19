@@ -29,9 +29,7 @@ const IntroSection = () => {
                                 <div className="cover-circle"></div>
                             </span>
                         </h1>
-                        <p className="caption">
-                            Because if the cover does not impress you what else can?
-                        </p>
+
                     </Col>
                 </Row>
             </Container>

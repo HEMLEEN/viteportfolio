@@ -1,6 +1,6 @@
 
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import { logoImage } from '../../constant/Constant';
+import { logoImageWhite } from '../../constant/Constant';
 
 const Header = (props: any) => {
 
@@ -13,7 +13,7 @@ const Header = (props: any) => {
             {`</Portfolio>`}
           </span> */}
           <img
-            src={logoImage} // Place your image in /public
+            src={logoImageWhite} // Place your image in /public
             alt="Emoji Developer"
             className="logo"
           />

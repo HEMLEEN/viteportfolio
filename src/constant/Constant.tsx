@@ -5,6 +5,7 @@ import shoppingGif from '../assets/shopping2-gif.gif'
 import yogaGif from '../assets/yoga.gif'
 import gymGif from '../assets/gym-gif.gif'
 import logoImage from '../assets/logo.png'
+import logoImageWhite from '../assets/logo-white.png'
 
 
 export {
@@ -14,7 +15,8 @@ export {
     shoppingGif,
     yogaGif,
     gymGif,
-    logoImage
+    logoImage,
+    logoImageWhite
 }
 
 export const projectData = [

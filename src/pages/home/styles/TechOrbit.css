@@ -1,5 +1,5 @@
 .tech-orbit-section {
-  background-color: #0d0221;
+   background: radial-gradient(circle at center, #2a0a4d 0%, #12032c 40%);
   min-height: 100vh;
   padding: 4rem 1rem;
   overflow: hidden;

@@ -90,7 +90,7 @@ const Home = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 className="box"
             >
-                <h2 className='text-center text-white border py-2 bg-dark'>Projects Overview</h2>
+                <h2 className='text-center text-white py-2'>Projects Overview</h2>
                 <FeaturedProjects />
             </motion.div>
 

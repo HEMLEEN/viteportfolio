@@ -4,6 +4,7 @@ import templateGif from '../assets/ecommerce-develope.gif'
 import shoppingGif from '../assets/shopping2-gif.gif'
 import yogaGif from '../assets/yoga.gif'
 import gymGif from '../assets/gym-gif.gif'
+import logoImage from '../assets/logo.png'
 
 
 export {
@@ -12,7 +13,8 @@ export {
     templateGif,
     shoppingGif,
     yogaGif,
-    gymGif
+    gymGif,
+    logoImage
 }
 
 export const projectData = [

@@ -1,5 +1,5 @@
 .intro-section {
-  background-color: #12032c;
+ background: radial-gradient(circle at center, #2a0a4d 0%, #12032c 100%);
   min-height: 40vh;
   font-family: 'Poppins', sans-serif;
 }

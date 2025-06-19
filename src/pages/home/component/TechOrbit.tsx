@@ -9,15 +9,15 @@ import { Col, Row } from 'react-bootstrap';
 import { devloperInfo } from '../../../res/String';
 
 const techIcons = [
-  { icon: faReact, name: 'React' },
-  { icon: faNode, name: 'Node' },
-  { icon: faVuejs, name: 'Vue' },
-  { icon: faGithub, name: 'GitHub' },
-  { icon: faJs, name: 'Javascript' },
-  { icon: faFigma, name: 'Figma' },
-  { icon: faCode, name: 'Vs Code' },
-  { icon: faAngular, name: 'Angular' },
-  { icon: faDatabase, name: 'Database' },
+  { icon: faReact, name: 'React',link:'https://vite.dev/guide/' },
+  { icon: faNode, name: 'Node',link:'https://react.dev/learn' },
+  { icon: faVuejs, name: 'Vue' ,link:'https://vuejs.org/guide/introduction.html'},
+  { icon: faGithub, name: 'GitHub',link:'#' },
+  { icon: faJs, name: 'Javascript',link:'https://developer.mozilla.org/en-US/docs/Web/JavaScript'  },
+  { icon: faFigma, name: 'Figma',link:'#'  },
+  { icon: faCode, name: 'Vs Code' ,link:'#' },
+  { icon: faAngular, name: 'React Native',link:'https://reactnative.dev/docs/environment-setup' },
+  { icon: faDatabase, name: 'Database',link:'#'  },
 ];
 
 const TechOrbit = () => {
@@ -65,9 +65,9 @@ const TechOrbit = () => {
         {/* Icons above curves */}
         <div className="icon-arc-wrapper">
           {techIcons.map((item, index) => (
-            <div className={`orbit-icon orbit-icon-${index}`} key={index}>
-              <FontAwesomeIcon icon={item.icon} size="lg" />
-              <span className="icon-label text-white position-absolute top-100 start-50 translate-middle-x">
+            <div className={`orbit-icon orbit-icon-${index}`} key={index} >
+              <FontAwesomeIcon icon={item.icon} size="lg"/>
+              <span className="icon-label text-white position-absolute top-100 start-50 translate-middle-x" >
                 {item.name}
               </span>
             </div>

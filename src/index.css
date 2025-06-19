@@ -8,12 +8,19 @@ body {
   background: radial-gradient(ellipse at center, #0f0f1f, #0b0b1a);
 }
 
-
+.logo{
+  object-fit: cover;
+  width: 80px;
+  height: 50px;
+}
 /* File Css */
 .file-cursor {
   cursor: pointer;
 }
 
+.text-cursor {
+cursor: pointer;
+}
 .spanText {
   font-size: 12px;
 }

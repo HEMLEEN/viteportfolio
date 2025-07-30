@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { GlobalContextData } from '../../context/Create';
 import AppDropdown from '../../components/AppDropdown';
-import { t } from 'i18next';
+import Logo from '../../assets/logo.svg'
 
 const Navbar = () => {
 
@@ -27,8 +27,7 @@ const Navbar = () => {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
                     {/* Logo */}
                     <a href="#" className="flex items-center justify-center space-x-3 rtl:space-x-reverse text-sm text-gray-600">
-                        {/* <img src={ChurchLogo} className="hidden md:block h-15" alt="Flowbite Logo" /> */}
-                        <p className='text text-white notranslate'>{t('customWords.churchName')}</p>
+                        <img src={Logo} className=" md:block h-15" alt="Flowbite Logo" />
                     </a>
 
                     {/* Hamburger */}

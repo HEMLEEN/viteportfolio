@@ -1,4 +1,5 @@
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { devloperInfo } from "../res/String";
 
 // Contact.tsx
 const Contact = () => {
@@ -29,7 +30,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-300">john@developer.com</p>
+                <p className="text-gray-300">{devloperInfo.mail}</p>
               </div>
             </div>
 
@@ -39,7 +40,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <p className="text-gray-300">+1 (555) 123-4567</p>
+                <p className="text-gray-300">{devloperInfo.phone}</p>
               </div>
             </div>
 
@@ -50,7 +51,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-300">San Francisco, CA</p>
+                <p className="text-gray-300">Coimbatore, Tamilnadu</p>
               </div>
             </div>
           </div>

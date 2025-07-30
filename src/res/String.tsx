@@ -19,7 +19,7 @@ export const authorInfo = {
 export const devloperInfo = {
     name: 'Hemleen Francis',
     shortName: 'HF',
-    mail: 'hemleen@gmail.com',
+    mail: 'hemleen7@gmail.com',
     phone: "91 9629817352",
     desc: 'You can reach out to me anytime for any queries, suggestions, or support related to the projects.',
     organization: 'Developer',

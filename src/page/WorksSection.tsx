@@ -1,7 +1,4 @@
-import React from 'react'
 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
-import { MdDeveloperMode, MdPhoneIphone } from "react-icons/md";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const WorksSection = () => {

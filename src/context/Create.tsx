@@ -11,6 +11,7 @@ const GlobalContextProvider = (props: any) => {
     const [showLoginModal, setShowLoginModal] = useState(true);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [changeLanguage, setChangeLanguage] = useState('');
+    const [coreLanguage, setCoreLanguage] = useState({topic:'',topicDesc:'',topicAnswer:[]});
 
     /**
         * Provide the all state into the context.
@@ -18,7 +19,8 @@ const GlobalContextProvider = (props: any) => {
     const values = {
         showLoginModal, setShowLoginModal,
         isMenuOpen, setIsMenuOpen,
-        changeLanguage, setChangeLanguage
+        changeLanguage, setChangeLanguage,
+        coreLanguage, setCoreLanguage
 
     }
     return (

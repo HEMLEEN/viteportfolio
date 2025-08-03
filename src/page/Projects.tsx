@@ -36,7 +36,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id='projects' className="bg-[#0D0D0D] text-white py-16 px-6 md:px-20 mt-10">
+    <section id='projects' className="bg-[#000] text-white py-16 px-6 md:px-20 mt-10">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-4">
           Featured Projects

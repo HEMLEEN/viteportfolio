@@ -7,7 +7,7 @@ import Projects from '../Projects'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-[#000]'>
       <DeveloperIntro/>
       <About/>
       <Features/>

@@ -3,22 +3,22 @@ import { GlobalContextData } from '../../../context/Create'
 import { NavLink } from 'react-router-dom';
 import CodingIllustration from '../components/CodingIllustration';
 
-const FrontendContents = () => {
+const VersionContents = () => {
 
-    const { coreFrontend } = useContext(GlobalContextData);
+    const { coreTools } = useContext(GlobalContextData);
 
     return (
         <section className="py-16 px-4 max-w-6xl mx-auto">
             <div className="mt-8">
                 <div className="mb-6 flex justify-between items-center gap-8 text-2xl font-semibold uppercase ">
-                    <p> {coreFrontend.topic}</p>
-                    <p className='hover:underline' ><NavLink to={'/frontend'}>Back</NavLink></p>
+                    <p> {coreTools.topic}</p>
+                    <p className='hover:underline' ><NavLink to={'/versionTools'}>Back</NavLink></p>
                 </div>
                  <div className="mb-6 flex justify-between items-center gap-8 text-lg ">
-                    <p> {coreFrontend.topicDesc}</p>
+                    <p> {coreTools.topicDesc}</p>
                 </div>
                 <div className="flex flex-col space-y-6 ">
-                    {coreFrontend.topicAnswer.map((line: any, idx: any) => (
+                    {coreTools.topicAnswer.map((line: any, idx: any) => (
                         <div key={idx} className="mb-4">
                          
                             <h3></h3>
@@ -46,4 +46,4 @@ const FrontendContents = () => {
     )
 }
 
-export default FrontendContents
+export default VersionContents

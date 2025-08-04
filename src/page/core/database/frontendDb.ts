@@ -1,4 +1,4 @@
-export const LanguageDatabase = [
+export const FrontendDatabase = [
     {
         zone: "React",
         zoneCode: "1",

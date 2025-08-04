@@ -5,6 +5,8 @@ import Navbar from "../page/navbar/Navbar";
 import LoveCompassionSection from "../page/hero/LoveCompassionSection";
 import Frontend from "../page/core/frontdend/Frontend";
 import FrontendContents from "../page/core/frontdend/Contents";
+import VersionContents from "../page/core/versionControl/Contents";
+import VersionControl from "../page/core/versionControl/VersionControl";
 
 
 const AppRouter = () => {
@@ -20,7 +22,9 @@ const AppRouter = () => {
 
                     {/* langugaes */}
                     <Route path="/frontend" element={<Frontend />}></Route>
-                    <Route path="/contents" element={<FrontendContents />}></Route>
+                    <Route path="/frontendContents" element={<FrontendContents />}></Route>
+                    <Route path="/versionTools" element={<VersionControl />}></Route>
+                    <Route path="/versionContents" element={<VersionContents />}></Route>
 
                 </Routes>
 

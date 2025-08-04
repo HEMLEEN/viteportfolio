@@ -132,7 +132,7 @@ const Skills = () => {
           </div>
           <div className="text-right mt-10 max-w-6xl mx-auto">
             <a href="#" className="text-sm text-white font-medium hover:underline">
-              <NavLink to={`/#`} > View Study →</NavLink>
+              <NavLink to={`/versionTools`} > View Study →</NavLink>
             </a>
           </div>
         </div>

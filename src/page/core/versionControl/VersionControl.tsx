@@ -1,24 +1,24 @@
 import { useContext, useEffect, useState } from 'react'
-import { FrontendDatabase } from '../database/frontendDb';
+import { GlobalContextData } from '../../../context/Create'
 import { useNavigate } from 'react-router-dom';
-import { GlobalContextData } from '../../../context/Create';
+import { versionTools } from '../database/Tools';
 import { FaArrowRight } from 'react-icons/fa';
 
-const Frontend = () => {
+const VersionControl = () => {
 
-    const naviagte = useNavigate()
+   const naviagte = useNavigate()
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const { setFrontend } = useContext(GlobalContextData);
+    const { setTools } = useContext(GlobalContextData);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [selectedZone, setSelectedZone] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
     const filteredData = selectedZone
-        ? FrontendDatabase.filter((item: any) => item.zone === selectedZone)
-        : FrontendDatabase;
+        ? versionTools.filter((item: any) => item.zone === selectedZone)
+        : versionTools;
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentItems = filteredData.slice(startIndex, startIndex + itemsPerPage);
     const isOpen = activeDropdown === 'zone';
@@ -32,7 +32,7 @@ const Frontend = () => {
         }
     }
 
-    const zones = [...new Set(FrontendDatabase.map((item) => item.zone))];
+    const zones = [...new Set(versionTools.map((item) => item.zone))];
 
     const handleZoneClick = (zone: string) => {
         setSelectedZone(zone);
@@ -49,7 +49,7 @@ const Frontend = () => {
                 className="flex items-center cursor-pointer w-full md:w-auto text-center text-3xl font-bold mb-8 border-b uppercase hover:text-teal-400"
                 onClick={toggleDropdown}
             >
-                Frontend
+                Version Tools
                 <svg className="w-8 h-8 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path
                         fillRule="evenodd"
@@ -86,8 +86,8 @@ const Frontend = () => {
                         key={`${lang.zoneCode}-${index}`}
                         className="flex flex-col justify-between bg-teal-50 rounded-lg shadow-md p-4 text-center cursor-pointer"
                         onClick={() => {
-                            setFrontend({ topic: lang.topic,topicDesc:lang.topicDesc, topicAnswer: lang.answers })
-                            naviagte('/frontendContents')
+                            setTools({ topic: lang.topic,topicDesc:lang.topicDesc, topicAnswer: lang.answers })
+                            naviagte('/versionContents')
                         }}
                     >
                         <div className="w-20 h-20 mx-auto rounded-full bg-gray-200 mb-4 flex items-center justify-center text-2xl font-bold text-teal-500 notranslate">
@@ -111,4 +111,4 @@ const Frontend = () => {
     )
 }
 
-export default Frontend
+export default VersionControl

@@ -1,10 +1,9 @@
-import { Copy } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import CodeBlock from "../core/components/CodeBlock";
 
 const CodeEditorDemo = ({ generatedCode }: any) => {
     const [output, setOutput] = useState<string>("");
-    const [copySuccess, setCopySuccess] = useState(false);
+    // const [copySuccess, setCopySuccess] = useState(false);
 
     const runCode = () => {
         try {
@@ -21,11 +20,11 @@ const CodeEditorDemo = ({ generatedCode }: any) => {
     };
 
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(generatedCode.code.join("\n"));
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 2000);
-    };
+    // const handleCopy = () => {
+    //     navigator.clipboard.writeText(generatedCode.code.join("\n"));
+    //     setCopySuccess(true);
+    //     setTimeout(() => setCopySuccess(false), 2000);
+    // };
 
 
     return (

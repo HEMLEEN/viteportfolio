@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import CodeEditorDemo from "./CodeEditorDemo";
-import Editor from "@monaco-editor/react";
+import { useEffect, useState } from "react";
 
 const codeSnippets = [
   {

@@ -31,7 +31,7 @@ const InfoPage = () => {
         <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-md font-semibold transition">
           View My Work ↓
         </button>
-        <button className="bg-black hover:bg-gray-900 px-6 py-2 rounded-md font-semibold">
+        <button className="bg-black hover:bg-gray-900 px-6 py-2 rounded-md font-semibold" onClick={() => window.open(devloperInfo.resumeLink, '_blank')}>
           Download Resume
         </button>
       </div>

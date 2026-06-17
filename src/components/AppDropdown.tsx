@@ -33,7 +33,7 @@ const AppDropdown = ({ label, dropdownKey, activeDropdown, setActiveDropdown, se
                 {data.map((item: any, index: number) => (
                     <li key={index} className='notranslate'>
                         <NavLink
-                            to={'/#'}
+                            to={item.path}
                             className="block px-4 py-2 text-sm font-bold text-teal-600 hover:bg-teal-100 uppercase notranslate"
                             onClick={() => { setActiveDropdown(null); setIsMenuOpen(false) ;scrollToProjects(item.path)}}
                         >

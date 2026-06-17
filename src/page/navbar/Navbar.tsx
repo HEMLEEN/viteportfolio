@@ -14,7 +14,10 @@ const Navbar = () => {
         { label: 'Road map', path: '#' },
 
     ];
+   const aiTool = [
+        { label: 'Code Ai', path: '/ai' },
 
+    ];
 
     const scrollToProjects = (id:any) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -65,6 +68,15 @@ const Navbar = () => {
                                 setIsMenuOpen={setIsMenuOpen}
                                 scrollToProjects={(id:any)=>scrollToProjects(id)}
                                 data={core}
+                            />
+                             <AppDropdown
+                                label={'AI TOOLS'}
+                                dropdownKey="aiTool"
+                                activeDropdown={activeDropdown}
+                                setActiveDropdown={setActiveDropdown}
+                                setIsMenuOpen={setIsMenuOpen}
+                                scrollToProjects={(id:any)=>scrollToProjects(id)}
+                                data={aiTool}
                             />
                             <li className="block py-2 px-3 text-sm font-bold text-black-400  hover:text-teal-600 notranslate" onClick={() => { setIsMenuOpen(false); setActiveDropdown(null);scrollToProjects('contact') }}><NavLink to={'/#'}>CONTACT US</NavLink></li>
                         </ul>

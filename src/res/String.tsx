@@ -1,6 +1,8 @@
 export const WebsiteName = `Hemleen's Portfolio`
 export const WebsitePorfolio = `Portfolio Website`
 export const WebsiteDesc = `"I think it's possible for ordinary people to choose to be extraordinary."`
+import Resume from '../assets/Hemleen Resume CV.pdf';
+
 export const authorInfo = {
     name: 'Hemleen Francis',
     about: `I'm Hemleen, a highly skilled MERN Stack Developer with 3+ years of experience.I specialize in designing and developing Web and Mobile applications frontend development and backend technologies.Proficient in all stages of the software development lifecycle, from concept to deployment and maintenance.Beyond coding, I'm an artist at heart ❤️ – often lost in the world of sketches and colors.Want to know more about me? Feel free to Download my resume.
@@ -26,7 +28,8 @@ export const devloperInfo = {
     currentOrganization: 'PSG Software Technologies',
     organizationRole: 'Full Stack',
     gitLink: 'https://github.com/HEMLEEN',
-    linkedIn: "https://www.linkedin.com/in/hemleen-francis-a6b144137/"
+    linkedIn: "https://www.linkedin.com/in/hemleen-francis-a6b144137/",
+    resumeLink: Resume
 
 }
 

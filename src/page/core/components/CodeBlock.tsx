@@ -16,7 +16,7 @@ const CodeBlock = ({ example }: any) => {
     <div className="relative bg-white-800 text-black text-regular rounded-xl p-10 my-2 ">
       {Array.isArray(example) && example.map((line: any, i: any) => (
         <pre key={i} className="overflow-x-auto">
-          <code className="text-white text-lg whitespace-pre-wrap ">{line}</code>
+          <code className="text-pink-400 text-lg whitespace-pre-wrap ">{line}</code>
         </pre>
       ))}
 

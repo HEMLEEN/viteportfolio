@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import { LoveImageOne, LoveImageThree, LoveImageTwo } from '../../constants/ImageSource';
 import { t } from 'i18next';
 import Celebrate from './Celebrate';
@@ -15,6 +15,10 @@ const LoveCompassionSection = () => {
     ? titleDesc
     : words.slice(0, 20).join(" ") + (isLong ? "..." : "");
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <section className="relative bg-white py-16 px-4 text-center">
       {/* Headline Section */}
@@ -30,17 +34,17 @@ const LoveCompassionSection = () => {
         <img
           src={'LoveImageOne'}
           alt="Person Praying"
-     className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10 mt-15"
+          className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10 mt-15"
         />
-          <img
-            src={'LoveImageTwo'}
-            alt="People Reading"
-           className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10"
-          />
+        <img
+          src={'LoveImageTwo'}
+          alt="People Reading"
+          className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10"
+        />
         <img
           src={'LoveImageThree'}
           alt="Woman in Church"
-         className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10 mt-15"
+          className="w-[200px] h-[320px] object-cover rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:brightness-110 hover:shadow-3xl z-10 mt-15"
         />
       </div>
 

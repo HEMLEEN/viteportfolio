@@ -1,4 +1,5 @@
 // Features.tsx
+import { useEffect } from 'react';
 import { FaCode, FaPaintBrush, FaBolt } from 'react-icons/fa';
 
 const features = [
@@ -23,6 +24,11 @@ const features = [
 ];
 
 const Features = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="bg-[#0D0D0D] py-16 px-6 md:px-20 text-white mt-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -10,9 +10,11 @@ import {
   SiSemanticuireact,
   SiFirebase,
   SiStripe,
-  SiSocketdotio,
+  SiSocketdotio
 
 } from "react-icons/si";
+ import {FaUpload } from 'react-icons/fa6';
+
 import { FaReact, FaVuejs, FaFileExcel } from "react-icons/fa";
 
 // Skills.tsx
@@ -38,6 +40,12 @@ const skills = {
     { name: "PostgreSQL", code: "6", navigate: "postgresql", icon: <SiPostgresql /> },
     { name: "MongoDB", code: "7", navigate: "mongodb", icon: <SiMongodb /> },
     { name: "Redis", code: "8", navigate: "redis", icon: <SiRedis /> }
+  ],
+
+   caches: [
+    { name: "Redis", code: "1", navigate: "redis", icon: <SiRedis /> },
+    { name: "RedisInsight", code: "2", navigate: "redisinsight", icon: <SiRedis /> },
+    { name: "Multer", code: "3", navigate: "multer", icon: <FaUpload /> }
   ],
 
   tools: [
@@ -124,9 +132,9 @@ const Skills = () => {
 
         {/* Tools & DevOps */}
         <div className="bg-[#0F0F0F] border border-gray-800 rounded-xl p-6 text-center">
-          <h3 className="text-xl font-semibold mb-4">Tools & DevOps</h3>
+          <h3 className="text-xl font-semibold mb-4">Cache & Performance</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {skills.tools.map((tool) => (
+            {skills.caches.map((tool) => (
               <Tag {...tool} color="gray" />
             ))}
           </div>
@@ -140,9 +148,24 @@ const Skills = () => {
 
       {/* Other Technologies */}
       <div className="text-center">
-        <h3 className="text-xl font-semibold mb-4">Other Technologies</h3>
+        <h3 className="text-xl font-semibold mb-4">DevOps Technologies</h3>
         <div className="flex flex-wrap justify-center gap-3">
           {skills.tools.map((tool) => (
+            <Tag {...tool} color="gray" />
+          ))}
+        </div>
+        <div className="text-right mt-10 max-w-6xl mx-auto">
+          <a href="#" className="text-sm text-white font-medium hover:underline">
+            <NavLink to={`/#`} > View Study →</NavLink>
+          </a>
+        </div>
+      </div>
+      
+       {/* Other Technologies */}
+      <div className="text-center">
+        <h3 className="text-xl font-semibold mb-4">Other Technologies</h3>
+        <div className="flex flex-wrap justify-center gap-3">
+          {skills.others.map((tool) => (
             <Tag {...tool} color="gray" />
           ))}
         </div>

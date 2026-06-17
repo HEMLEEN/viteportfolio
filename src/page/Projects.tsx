@@ -24,13 +24,13 @@ const projects = [
     liveUrl: 'https://mountcarmelchurchpodanur.org',
   },
   {
-    title: 'Online Shopping Platform',
+    title: 'Online Book Shopping Platform',
     description:
-      'An online shopping experience with secure payment options, product filtering, and easy-to-use cart management features',
+      'An online book shopping experience with secure payment options, product filtering, and easy-to-use cart management features',
     image: ShopGif,
-    tech: ['Vue.js', 'Node js','Express js', 'Mongoose', 'MongoDb'],
+    tech: ['Typescript', 'Node ts','Express js', 'Mongoose', 'MongoDb'],
     codeUrl: '#',
-    liveUrl: 'https://bookmyshop.netlify.app',
+    liveUrl: 'https://demohebabooks.netlify.app/',
   },
 ];
 
@@ -97,7 +97,7 @@ const Projects = () => {
       {/* View All Button */}
       <div className="text-center">
         <a
-          href="/projects"
+          href="#"
           className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-full hover:scale-105 transition"
         >
           View All Projects

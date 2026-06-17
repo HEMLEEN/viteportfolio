@@ -7,6 +7,7 @@ import Frontend from "../page/core/frontdend/Frontend";
 import FrontendContents from "../page/core/frontdend/Contents";
 import VersionContents from "../page/core/versionControl/Contents";
 import VersionControl from "../page/core/versionControl/VersionControl";
+import AiTool from "../page/ai/AiTool";
 
 
 const AppRouter = () => {
@@ -25,6 +26,7 @@ const AppRouter = () => {
                     <Route path="/frontendContents" element={<FrontendContents />}></Route>
                     <Route path="/versionTools" element={<VersionControl />}></Route>
                     <Route path="/versionContents" element={<VersionContents />}></Route>
+                    <Route path="/ai" element={<AiTool />}></Route>
 
                 </Routes>
 

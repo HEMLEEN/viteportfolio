@@ -1,15 +1,22 @@
 // AboutMe.tsx
 
+import { useEffect } from "react";
+
 const AboutMe = () => {
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <section id='about' className="bg-[#0D0D0D] text-white py-16 px-6 md:px-20 mt-10">
+    <section id='about' className="bg-[#0D0D0D] text-white py-16 px-6 md:px-20 mt-20">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-4">
           About Me
         </h2>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          I'm a passionate full-stack developer with 5+ years of experience creating digital solutions that make a difference. I love turning complex problems into simple, beautiful designs.
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          Results-driven Senior Full Stack Developer specializing in MERN Stack Technologies. Delivered scalable web and mobile applications through expertise in TypeScript, React.js, Next.js, Node.js, Express.js, NestJS, MongoDB, SQL, React Native, AWS, and Docker. Focused on optimizing application performance, implementing secure authentication systems, and
+          enhancing user experience in diverse environments.
         </p>
       </div>
 

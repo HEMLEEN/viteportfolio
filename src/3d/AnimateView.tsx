@@ -21,7 +21,10 @@ const belief = "I believe in writing code that not only works but is also mainta
 
 const heroItems: TunnelItem[] = [
   { title: "Frontend", label: " 5+ years" }, { title: "Backend", label: "5+ years" },
-  { title: "Mobile App", label: "Mobile App" }, { title: "Docker", label: "DevOps" },
+  { title: "Mobile App", label: "Mobile App" },
+  { title: "Git Hub", label: "GitHub" }, { title: "Git", label: "Git" },
+  { title: "UI", label: "2+ years" }, { title: "UX", label: "2+ years" }, { title: "Figma", label: "Figma" },
+  { title: "Docker", label: "DevOps" },
 ];
 
 // const aboutItems: TunnelItem[] = [

@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import PerspectiveTunnelHero, { type TunnelItem } from "./perspective-tunnel-hero";
 import SkillsSection from "./SkillSection";
-import HeroSection from "./Hero";
 import AboutSection from "./About";
 import Contact from "./Contact";
 
@@ -15,29 +13,22 @@ const profile = {
   location: "Coimbatore, Tamilnadu",
   response: "I typically respond to emails within 24 hours. For urgent matters, feel free to reach out via phone.",
 };
-const journey = [
-  "Started my coding journey in 2018 and have been building web applications ever since. I specialize in React, Node.js, and modern web technologies.",
-  "When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community.",
-];
+// const journey = [
+//   "Started my coding journey in 2018 and have been building web applications ever since. I specialize in React, Node.js, and modern web technologies.",
+//   "When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community.",
+// ];
 const belief = "I believe in writing code that not only works but is also maintainable, scalable, and brings value to users.";
-const skillIntro = "I work with a variety of technologies to bring ideas to life. Here are some of the tools and frameworks I'm proficient in.";
-const skillGroups = [
-  { title: "Frontend", items: ["React", "Next.js", "TypeScript", "Redux", "Tailwind CSS", "Bootstrap", "Framer Motion", "Vue.js", "Vuex"] },
-  { title: "Backend & Database", items: ["Node.js", "Express", "TypeScript", "Oracle", "MySQL", "PostgreSQL", "MongoDB", "Redis"] },
-  { title: "Cache & Performance", items: ["Redis", "RedisInsight", "Multer"] },
-  { title: "DevOps Technologies", items: ["Git", "Docker", "AWS", "Vercel", "Figma", "VS Code"] },
-  { title: "Other Technologies", items: ["GraphQL", "Jest", "Webpack", "Sass", "Material-UI", "Semantic-UI", "Firebase", "Stripe", "Socket.io"] },
-];
 
 const heroItems: TunnelItem[] = [
   { title: "Frontend", label: " 5+ years" }, { title: "Backend", label: "5+ years" },
   { title: "Mobile App", label: "Mobile App" }, { title: "Docker", label: "DevOps" },
 ];
-const aboutItems: TunnelItem[] = [
-  { title: "2018", label: "Started coding" }, { title: "React", label: "Specialty" }, { title: "Node.js", label: "Specialty" },
-  { title: "Web apps", label: "Building" }, { title: "Open source", label: "Contributing" }, { title: "Community", label: "Sharing" },
-  { title: "Maintainable", label: "Belief" }, { title: "Scalable", label: "Belief" }, { title: "Value", label: "Belief" },
-];
+
+// const aboutItems: TunnelItem[] = [
+//   { title: "2018", label: "Started coding" }, { title: "React", label: "Specialty" }, { title: "Node.js", label: "Specialty" },
+//   { title: "Web apps", label: "Building" }, { title: "Open source", label: "Contributing" }, { title: "Community", label: "Sharing" },
+//   { title: "Maintainable", label: "Belief" }, { title: "Scalable", label: "Belief" }, { title: "Value", label: "Belief" },
+// ];
 const principleItems: TunnelItem[] = [
   { title: "Maintainable", label: "Principle" }, { title: "Scalable", label: "Principle" }, { title: "Valuable", label: "Principle" },
   { title: "Typed", label: "TypeScript" }, { title: "Tested", label: "Jest" }, { title: "Fast", label: "Redis" },
@@ -54,13 +45,12 @@ const nav = [
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
-const display = { fontFamily: "Anton, 'Bebas Neue', Impact, sans-serif" };
 
-const Arrow = ({ className = "", stroke = 14 }: { className?: string; stroke?: number }) => (
-  <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
-    <path d="M18 82 82 18M30 18h52v52" stroke="currentColor" strokeWidth={stroke} strokeLinecap="square" />
-  </svg>
-);
+// const Arrow = ({ className = "", stroke = 14 }: { className?: string; stroke?: number }) => (
+//   <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+//     <path d="M18 82 82 18M30 18h52v52" stroke="currentColor" strokeWidth={stroke} strokeLinecap="square" />
+//   </svg>
+// );
 
 /* ---------- Page ---------- */
 export default function AnimateView() {

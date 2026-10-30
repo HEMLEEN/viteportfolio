@@ -1,26 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import ScrollMorphHero, { type MorphItem } from "./ScrollMorphHero";
 import SkillView from "./SkillView";
 
 export interface SkillGroup { title: string; items: string[] }
 
-interface SkillsSectionProps {
-  intro: string;
-  groups: SkillGroup[];
-  contactHref?: string;
-}
-
-const display = { fontFamily: "Anton, 'Bebas Neue', Impact, sans-serif" };
-
-const heroItems: MorphItem[] = [
-  { title: "React", label: "Frontend" }, { title: "Node.js", label: "Backend" }, { title: "TypeScript", label: "Language" },
-  { title: "Next.js", label: "Frontend" }, { title: "PostgreSQL", label: "Database" }, { title: "MongoDB", label: "Database" },
-  { title: "Redis", label: "Cache" }, { title: "Docker", label: "DevOps" }, { title: "AWS", label: "Cloud" },
-  { title: "GraphQL", label: "API" }, { title: "Tailwind", label: "Styling" }, { title: "Firebase", label: "Platform" },
-];
 
 const skills: any[] = [
   {
@@ -50,8 +33,7 @@ const skills: any[] = [
   },
 ];
 
-export default function SkillsSection({ intro, groups, contactHref = "#contact" }: SkillsSectionProps) {
-  const [open, setOpen] = useState(0);
+export default function SkillsSection() {
 
   return (
     <section id="skills">

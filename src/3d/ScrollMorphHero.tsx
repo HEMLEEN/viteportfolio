@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useRef, type CSSProperties, type ReactNode } from "react";
+import { useState, useEffect, useMemo, useRef, type CSSProperties, type ReactNode } from "react";
 import { motion, useTransform, useSpring, useMotionValue, useReducedMotion } from "framer-motion";
 
 // --- Types ---

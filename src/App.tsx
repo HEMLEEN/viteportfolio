@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AnimateView from './3d/AnimateView';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Routes>

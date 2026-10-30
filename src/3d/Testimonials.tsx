@@ -1,13 +1,11 @@
 
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import {
+    AnimatePresence,
     motion,
     useReducedMotion,
-    useScroll,
-    useTransform,
-    type MotionValue,
 } from "framer-motion";
 
 import {
@@ -17,6 +15,8 @@ import {
     Layers3,
     Zap,
     CheckCircle2,
+    ArrowLeft,
+    ArrowRight,
 } from "lucide-react";
 
 // --------------------------------------------------
@@ -46,9 +46,6 @@ interface TestimonialsProps {
 const display = {
     fontFamily: "Anton, 'Bebas Neue', Impact, sans-serif",
 };
-
-const clamp = (value: number, min: number, max: number) =>
-    Math.min(max, Math.max(min, value));
 
 const skins = [
     {
@@ -205,39 +202,48 @@ function PracticeCardContent({
     const Icon = practice.icon;
 
     return (
-        <article className="flex h-full flex-col p-6 sm:p-9">
+        <article className="flex h-full flex-col p-5 sm:p-7 md:p-9">
+
             {/* Header */}
             <div className="flex items-start justify-between gap-4">
-                <div>
-                    <span className={`text-xs font-bold tracking-[0.18em] ${skin.accent}`}>
+
+                <div className="min-w-0">
+                    <span
+                        className={`text-[10px] font-bold tracking-[0.16em] sm:text-xs ${skin.accent}`}
+                    >
                         {practice.category}
                     </span>
 
                     <h3
                         style={display}
-                        className="mt-5 text-4xl uppercase leading-[0.95] sm:text-5xl"
+                        className="mt-4 text-3xl uppercase leading-[0.95] sm:text-4xl md:text-5xl"
                     >
                         {practice.title}
                     </h3>
 
-                    <p className={`mt-3 text-sm font-semibold ${skin.sub}`}>
+                    <p className={`mt-3 text-xs font-semibold sm:text-sm ${skin.sub}`}>
                         {practice.subtitle}
                     </p>
                 </div>
 
                 <div className={`shrink-0 ${skin.accent}`}>
-                    <Icon size={36} strokeWidth={1.5} />
+                    <Icon
+                        size={30}
+                        strokeWidth={1.5}
+                        className="sm:h-9 sm:w-9"
+                    />
                 </div>
             </div>
 
             {/* Description */}
-            <p className={`mt-6 text-sm leading-relaxed sm:text-base ${skin.sub}`}>
+            <p className={`mt-5 text-sm leading-relaxed sm:mt-6 sm:text-base ${skin.sub}`}>
                 {practice.description}
             </p>
 
-            {/* Engineering practices */}
+            {/* Engineering Practices */}
             <div className="mt-6 flex-1">
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em]">
+
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.16em] sm:text-xs">
                     Engineering practices
                 </p>
 
@@ -245,7 +251,7 @@ function PracticeCardContent({
                     {practice.practices.map((item) => (
                         <li
                             key={item}
-                            className="flex items-start gap-3 text-sm leading-relaxed"
+                            className="flex items-start gap-3 text-xs leading-relaxed sm:text-sm"
                         >
                             <CheckCircle2
                                 size={17}
@@ -260,7 +266,8 @@ function PracticeCardContent({
 
             {/* Technologies */}
             <div className="mt-7 border-t border-current/15 pt-5">
-                <p className={`mb-3 text-xs font-bold uppercase tracking-[0.16em] ${skin.sub}`}>
+
+                <p className={`mb-3 text-[10px] font-bold uppercase tracking-[0.16em] sm:text-xs ${skin.sub}`}>
                     Technologies
                 </p>
 
@@ -268,130 +275,186 @@ function PracticeCardContent({
                     {practice.technologies.map((technology) => (
                         <span
                             key={technology}
-                            className={`rounded-md px-3 py-1.5 text-xs font-semibold ${skin.badge}`}
+                            className={`rounded-md px-3 py-1.5 text-[10px] font-semibold sm:text-xs ${skin.badge}`}
                         >
                             {technology}
                         </span>
                     ))}
                 </div>
             </div>
+
         </article>
     );
 }
 
 // --------------------------------------------------
-// Scroll Stack Card
+// Single Card Carousel
 // --------------------------------------------------
 
-function StackCard({
-    practice,
-    index,
-    progress,
-}: {
-    practice: EngineeringPractice;
-    index: number;
-    progress: MotionValue<number>;
-}) {
-    const skin = skins[index % skins.length];
-
-    const transform = useTransform(progress, (value) => {
-        const enter =
-            index === 0
-                ? 1
-                : clamp(value - (index - 1), 0, 1);
-
-        const eased = 1 - Math.pow(1 - enter, 3);
-        const depth = Math.max(0, value - index);
-
-        const tilt = (1 - eased) * (index % 2 ? 4 : -4);
-
-        return `
-            translateY(${(1 - eased) * 100}vh)
-            translateY(${-depth * 18}px)
-            scale(${1 - depth * 0.05})
-            rotate(${tilt}deg)
-        `;
-    });
-
-    const opacity = useTransform(progress, (value) =>
-        index === 0
-            ? 1
-            : clamp((value - (index - 1)) * 6, 0, 1)
-    );
-
-    const shade = useTransform(progress, (value) =>
-        clamp(value - index, 0, 2) * 0.18
-    );
-
-    return (
-        <motion.div
-            style={{
-                transform,
-                opacity,
-                zIndex: index,
-            }}
-            className={`absolute inset-0 overflow-hidden rounded-3xl shadow-2xl shadow-black/25 ${skin.card}`}
-        >
-            <PracticeCardContent
-                practice={practice}
-                skin={skin}
-            />
-
-            <motion.div
-                aria-hidden="true"
-                style={{ opacity: shade }}
-                className="pointer-events-none absolute inset-0 bg-black"
-            />
-        </motion.div>
-    );
-}
-
-// --------------------------------------------------
-// Scroll Stack
-// --------------------------------------------------
-
-function ScrollStack({
+function PracticeCarousel({
     items,
 }: {
     items: EngineeringPractice[];
 }) {
-    const ref = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const reduceMotion = useReducedMotion();
 
     const count = items.length;
 
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end end"],
-    });
+    if (!count) return null;
 
-    const progress = useTransform(
-        scrollYProgress,
-        [0, 1],
-        [0, Math.max(0, count - 1)]
-    );
+    const activePractice = items[activeIndex];
+    const skin = skins[activeIndex % skins.length];
 
-    if (count === 0) return null;
+    const previous = () => {
+        setActiveIndex((current) =>
+            current === 0 ? count - 1 : current - 1
+        );
+    };
+
+    const next = () => {
+        setActiveIndex((current) =>
+            current === count - 1 ? 0 : current + 1
+        );
+    };
+
+    const handleDragEnd = (
+        _: MouseEvent | TouchEvent | PointerEvent,
+        info: { offset: { x: number } }
+    ) => {
+        if (info.offset.x < -80) {
+            next();
+        } else if (info.offset.x > 80) {
+            previous();
+        }
+    };
 
     return (
-        <div
-            ref={ref}
-            style={{
-                height: `${(count - 1) * 60 + 100}vh`,
-            }}
-            className="relative"
-        >
-            <div className="sticky top-0 flex h-screen items-center justify-center px-5 sm:px-6">
-                <div className="relative h-[34rem] w-full max-w-2xl sm:h-[36rem]">
-                    {items.map((practice, index) => (
-                        <StackCard
-                            key={practice.id}
-                            practice={practice}
-                            index={index}
-                            progress={progress}
+        <div className="mx-auto w-full max-w-5xl px-4 pb-20 sm:px-6 md:pb-28">
+
+            {/* Card */}
+            <div className="relative">
+
+                <AnimatePresence mode="wait" initial={false}>
+                    <motion.div
+                        key={activePractice.id}
+                        initial={reduceMotion ? false : {
+                            opacity: 0,
+                            x: 45,
+                        }}
+                        animate={{
+                            opacity: 1,
+                            x: 0,
+                        }}
+                        exit={reduceMotion ? undefined : {
+                            opacity: 0,
+                            x: -45,
+                        }}
+                        transition={{
+                            duration: reduceMotion ? 0 : 0.35,
+                            ease: "easeInOut",
+                        }}
+                        drag={reduceMotion ? false : "x"}
+                        dragConstraints={{
+                            left: 0,
+                            right: 0,
+                        }}
+                        dragElastic={0.12}
+                        onDragEnd={handleDragEnd}
+                        className={`relative min-h-[480px] overflow-hidden rounded-2xl shadow-2xl shadow-black/15 sm:rounded-3xl md:min-h-[540px] ${skin.card}`}
+                    >
+                        <PracticeCardContent
+                            practice={activePractice}
+                            skin={skin}
                         />
-                    ))}
-                </div>
+                    </motion.div>
+                </AnimatePresence>
+
             </div>
+
+            {/* Navigation */}
+            <div className="mt-7 flex items-center justify-between gap-4 sm:mt-9">
+
+                {/* Previous */}
+                <button
+                    type="button"
+                    onClick={previous}
+                    aria-label="Previous engineering practice"
+                    className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-black/20 transition-all hover:border-black hover:bg-black hover:text-white sm:h-12 sm:w-12"
+                >
+                    <ArrowLeft
+                        size={20}
+                        className="transition-transform group-hover:-translate-x-1"
+                    />
+                </button>
+
+                {/* Progress */}
+                <div className="flex flex-1 flex-col items-center gap-3">
+
+                    <div className="flex items-center gap-2">
+                        <span
+                            style={display}
+                            className="text-2xl sm:text-3xl"
+                        >
+                            {String(activeIndex + 1).padStart(2, "0")}
+                        </span>
+
+                        <span className="text-sm text-black/40">
+                            /
+                        </span>
+
+                        <span
+                            style={display}
+                            className="text-lg text-black/40 sm:text-xl"
+                        >
+                            {String(count).padStart(2, "0")}
+                        </span>
+                    </div>
+
+                    {/* Progress indicators */}
+                    <div className="flex items-center gap-2">
+                        {items.map((item, index) => (
+                            <button
+                                key={item.id}
+                                type="button"
+                                onClick={() => setActiveIndex(index)}
+                                aria-label={`Go to ${item.title}`}
+                                aria-current={activeIndex === index ? "step" : undefined}
+                                className={`h-1.5 rounded-full transition-all duration-300 ${
+                                    activeIndex === index
+                                        ? "w-8 bg-teal-600"
+                                        : "w-3 bg-black/20 hover:bg-black/50"
+                                }`}
+                            />
+                        ))}
+                    </div>
+
+                    <span className="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-black/40 sm:block">
+                        Engineering principles
+                    </span>
+                </div>
+
+                {/* Next */}
+                <button
+                    type="button"
+                    onClick={next}
+                    aria-label="Next engineering practice"
+                    className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-black/20 transition-all hover:border-black hover:bg-black hover:text-white sm:h-12 sm:w-12"
+                >
+                    <ArrowRight
+                        size={20}
+                        className="transition-transform group-hover:translate-x-1"
+                    />
+                </button>
+
+            </div>
+
+            {/* Mobile swipe hint */}
+            <p className="mt-5 text-center text-[10px] font-medium uppercase tracking-[0.15em] text-black/35 sm:hidden">
+                Swipe left or right to explore
+            </p>
+
         </div>
     );
 }
@@ -404,7 +467,6 @@ export default function Testimonials({
     practices = defaultPractices,
     intro = "Building scalable applications is more than writing code. It requires clean architecture, optimized databases, efficient APIs, predictable frontend state and intelligent caching strategies.",
 }: TestimonialsProps) {
-    const reduceMotion = useReducedMotion();
 
     const activePractices = practices.filter(
         (practice) => practice.id && practice.title
@@ -413,40 +475,30 @@ export default function Testimonials({
     return (
         <section
             id="testimonials"
-            className="bg-[#eef0f2] text-black"
+            className="overflow-hidden bg-[#eef0f2] text-black"
         >
+
             {/* Section Header */}
-            <div className="px-6 pb-10 pt-24 text-center md:px-12">
+            <div className="px-5 pb-8 pt-20 text-center sm:px-8 sm:pb-10 sm:pt-24 md:px-12">
+
                 <h2
                     style={display}
-                    className="text-[14vw] uppercase leading-[0.9] md:text-[7vw]"
+                    className="text-[12vw] uppercase leading-[0.9] sm:text-[10vw] md:text-[7vw]"
                 >
                     Architecture Engineering
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-black/70 md:text-lg">
+                <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-black/70 sm:text-base md:text-lg">
                     {intro}
                 </p>
+
             </div>
 
-            {/* Reduced Motion / Scroll Stack */}
-            {reduceMotion ? (
-                <ul className="mx-auto grid max-w-2xl gap-6 px-5 pb-24">
-                    {activePractices.map((practice, index) => (
-                        <li
-                            key={practice.id}
-                            className={`overflow-hidden rounded-3xl shadow-xl shadow-black/10 ${skins[index % skins.length].card}`}
-                        >
-                            <PracticeCardContent
-                                practice={practice}
-                                skin={skins[index % skins.length]}
-                            />
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                    <ScrollStack items={activePractices} />
-            )}
+            {/* One by One Carousel */}
+            <PracticeCarousel
+                items={activePractices}
+            />
+
         </section>
     );
 }

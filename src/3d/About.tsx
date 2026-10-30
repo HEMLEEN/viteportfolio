@@ -528,7 +528,7 @@ export default function AboutSection({
                                     className="absolute bottom-full right-0 z-30 mb-5 flex flex-row items-center gap-6 whitespace-nowrap"
                                 >
                                     <motion.a
-                                        href="mailto:xx@mail.com"
+                                        href="mailto:hemleen7@.com"
                                         whileHover={{ y: -5, color: "#14b8a6" }}
                                         className="flex items-center gap-2 text-sm font-semibold text-black"
                                     >
@@ -536,7 +536,7 @@ export default function AboutSection({
                                     </motion.a>
 
                                     <motion.a
-                                        href="tel:+91XXXXXXXX7352"
+                                        href="tel:+919629817352"
                                         whileHover={{ y: -5, color: "#14b8a6" }}
                                         className="flex items-center gap-2 text-sm font-semibold text-black"
                                     >
@@ -544,7 +544,7 @@ export default function AboutSection({
                                     </motion.a>
 
                                     <motion.a
-                                        href="https://www.linkedin.com/in/xxx"
+                                        href="https://www.linkedin.com/in/hemleenf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         whileHover={{ y: -5, color: "#14b8a6" }}

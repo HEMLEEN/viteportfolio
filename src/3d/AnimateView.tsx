@@ -2,6 +2,9 @@ import PerspectiveTunnelHero, { type TunnelItem } from "./perspective-tunnel-her
 import SkillsSection from "./SkillSection";
 import AboutSection from "./About";
 import Contact from "./Contact";
+import Projects from "./Projects";
+import ClientsSection from "./ClientSection";
+import Testimonials from "./Testimonials";
 
 /* ---------- Data ---------- */
 const profile = {
@@ -46,6 +49,8 @@ const contactItems: TunnelItem[] = [
 const nav = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "reviews", label: "Reviews" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -124,10 +129,27 @@ export default function AnimateView() {
       </section>
 
       {/* 3 · Skills (separate component, same tunnel) */}
-      <SkillsSection />
+      <section id="skills">
+        <SkillsSection />
+      </section>
 
-      {/* 4 · Principles */}
-      <section id="principles">
+      {/* 4  Project section*/}
+      <section id="projects">
+        <Projects />
+      </section>
+
+      {/* 5  Client section*/}
+      {/* <section id="reviews">
+        <ClientsSection />
+      </section> */}
+
+      {/* 5  Testomonil section*/}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      {/* 6 · Principles */}
+      {/* <section id="principles">
         <PerspectiveTunnelHero
           mode="scroll"
           items={principleItems}
@@ -135,9 +157,9 @@ export default function AnimateView() {
           titleClassName="text-[15vw] md:text-[8vw]"
           subtitle={belief}
         />
-      </section>
+      </section> */}
 
-      {/* 5 · Contact */}
+      {/* 7 · Contact */}
       <section id="contact">
         <PerspectiveTunnelHero
           mode="scroll"

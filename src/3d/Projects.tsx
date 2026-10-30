@@ -2,9 +2,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaGithub } from "react-icons/fa";
-import gymGif from "../assets/gym.gif";
+import gymGif from "../assets/gym.png";
 import churchWeb from "../assets/church-website.png";
-import ShopGif from "../assets/shopping2-gif.gif";
+import ShopGif from "../assets/shopping.png";
 
 interface Project {
     title: string;

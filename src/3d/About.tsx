@@ -519,39 +519,39 @@ export default function AboutSection({
                         <AnimatePresence>
                             {showContact && (
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                                    exit={{ opacity: 0, scale: 0.8, y: 10 }}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
                                     transition={{ duration: 0.25 }}
-                                    className="absolute right-0 top-full z-30 mt-4 flex min-w-64 flex-col gap-3 rounded-2xl border border-black/10 bg-white p-4 shadow-2xl"
                                     onHoverStart={() => setShowContact(true)}
                                     onHoverEnd={() => setShowContact(false)}
+                                    className="absolute bottom-full right-0 z-30 mb-5 flex flex-row items-center gap-6 whitespace-nowrap"
                                 >
-                                    <a
+                                    <motion.a
                                         href="mailto:xx@mail.com"
-                                        className="flex items-center gap-3 rounded-xl p-3 transition-colors hover:bg-teal-50"
+                                        whileHover={{ y: -5, color: "#14b8a6" }}
+                                        className="flex items-center gap-2 text-sm font-semibold text-black"
                                     >
-                                        <Mail size={20} />
-                                        <span className="text-sm">xx@mail.com</span>
-                                    </a>
+                                        <Mail size={18} />
+                                    </motion.a>
 
-                                    <a
+                                    <motion.a
                                         href="tel:+91XXXXXXXX7352"
-                                        className="flex items-center gap-3 rounded-xl p-3 transition-colors hover:bg-teal-50"
+                                        whileHover={{ y: -5, color: "#14b8a6" }}
+                                        className="flex items-center gap-2 text-sm font-semibold text-black"
                                     >
-                                        <Phone size={20} />
-                                        <span className="text-sm">XXXXXX7352</span>
-                                    </a>
+                                        <Phone size={18} />
+                                    </motion.a>
 
-                                    <a
+                                    <motion.a
                                         href="https://www.linkedin.com/in/xxx"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-3 rounded-xl p-3 transition-colors hover:bg-teal-50"
+                                        whileHover={{ y: -5, color: "#14b8a6" }}
+                                        className="flex items-center gap-2 text-sm font-semibold text-black"
                                     >
-                                        <Linkedin size={20} />
-                                        <span className="text-sm">LinkedIn Profile</span>
-                                    </a>
+                                        <Linkedin size={18} />
+                                    </motion.a>
                                 </motion.div>
                             )}
                         </AnimatePresence>

@@ -3,7 +3,7 @@ import SkillsSection from "./SkillSection";
 import AboutSection from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
-import ClientsSection from "./ClientSection";
+// import ClientsSection from "./ClientSection";
 import Testimonials from "./Testimonials";
 
 /* ---------- Data ---------- */
@@ -20,7 +20,7 @@ const profile = {
 //   "Started my coding journey in 2018 and have been building web applications ever since. I specialize in React, Node.js, and modern web technologies.",
 //   "When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community.",
 // ];
-const belief = "I believe in writing code that not only works but is also maintainable, scalable, and brings value to users.";
+// const belief = "I believe in writing code that not only works but is also maintainable, scalable, and brings value to users.";
 
 const heroItems: TunnelItem[] = [
   { title: "Frontend", label: " 5+ years" }, { title: "Backend", label: "5+ years" },
@@ -35,11 +35,11 @@ const heroItems: TunnelItem[] = [
 //   { title: "Web apps", label: "Building" }, { title: "Open source", label: "Contributing" }, { title: "Community", label: "Sharing" },
 //   { title: "Maintainable", label: "Belief" }, { title: "Scalable", label: "Belief" }, { title: "Value", label: "Belief" },
 // ];
-const principleItems: TunnelItem[] = [
-  { title: "Maintainable", label: "Principle" }, { title: "Scalable", label: "Principle" }, { title: "Valuable", label: "Principle" },
-  { title: "Typed", label: "TypeScript" }, { title: "Tested", label: "Jest" }, { title: "Fast", label: "Redis" },
-  { title: "Shipped", label: "Docker" }, { title: "Clean", label: "Code" }, { title: "Reliable", label: "Users" },
-];
+// const principleItems: TunnelItem[] = [
+//   { title: "Maintainable", label: "Principle" }, { title: "Scalable", label: "Principle" }, { title: "Valuable", label: "Principle" },
+//   { title: "Typed", label: "TypeScript" }, { title: "Tested", label: "Jest" }, { title: "Fast", label: "Redis" },
+//   { title: "Shipped", label: "Docker" }, { title: "Clean", label: "Code" }, { title: "Reliable", label: "Users" },
+// ];
 const contactItems: TunnelItem[] = [
   { title: "Email", label: "hemleen7" }, { title: "Phone", label: "+91" }, { title: "Coimbatore", label: "Location" },
   { title: "24h reply", label: "Response" }, { title: "Hello", label: "Say hi" }, { title: "Hire me", label: "Available" },

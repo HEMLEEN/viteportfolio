@@ -2,11 +2,11 @@ import PerspectiveTunnelHero, { type TunnelItem } from "./perspective-tunnel-her
 import SkillsSection from "./SkillSection";
 import AboutSection from "./About";
 import Contact from "./Contact";
-import Projects from "./Projects";
 // import ClientsSection from "./ClientSection";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import InkOrbitFeatures from "./workflow-section";
+import WorkTogether from "./WorkTogether";
 
 /* ---------- Data ---------- */
 const profile = {
@@ -126,7 +126,7 @@ export default function AnimateView() {
 
       {/* 6  Project section*/}
       <section id="projects">
-        <Projects />
+        <WorkTogether />
       </section>
 
       {/* 7 · Principles */}

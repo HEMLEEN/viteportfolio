@@ -18,7 +18,6 @@ import {
     ArrowLeft,
     ArrowRight,
 } from "lucide-react";
-import { Lens } from "@/components/velora/lens";
 import { BorderBeam } from "@/components/velora/border-beam";
 import { GlowingEffect } from "@/components/velora/glowing-effect";
 

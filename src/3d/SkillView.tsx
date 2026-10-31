@@ -9,6 +9,7 @@ import {
     type ReactNode,
 } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { GlowingEffect } from "@/components/velora/glowing-effect";
 
 export interface SkillItem {
     name: string;
@@ -277,6 +278,8 @@ export default function SkillView({
                                 <div className="flex h-full flex-col
                                     items-center justify-center gap-4
                                     px-3 text-center sm:gap-5">
+                                    <GlowingEffect />
+
                                     <div
                                         className="flex items-center
                                             justify-center text-5xl

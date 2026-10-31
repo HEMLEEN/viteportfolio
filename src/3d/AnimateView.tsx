@@ -6,6 +6,7 @@ import Projects from "./Projects";
 // import ClientsSection from "./ClientSection";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
+import InkOrbitFeatures from "./workflow-section";
 
 /* ---------- Data ---------- */
 const profile = {
@@ -119,9 +120,9 @@ export default function AnimateView() {
       </section>
 
       {/* 5  Client section*/}
-      {/* <section id="reviews">
-        <ClientsSection />
-      </section> */}
+      <section id="reviews">
+        <InkOrbitFeatures />
+      </section>
 
       {/* 6  Project section*/}
       <section id="projects">

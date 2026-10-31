@@ -12,6 +12,7 @@ import {
     useTransform,
 } from "framer-motion";
 import { Mail, Phone, Linkedin } from "lucide-react";
+import { PointerHighlight } from "@/components/velora/pointer-highlight";
 
 import CommonModal, { type ModalData } from "./CommonModal";
 
@@ -486,7 +487,7 @@ export default function AboutSection({
                             style={display}
                             className="text-[18vw] uppercase leading-[0.9] text-black md:text-[9vw]"
                         >
-                            About me
+                            <PointerHighlight> About me</PointerHighlight> 
                         </h2>
 
                         <p className="mt-6 max-w-xl text-base leading-relaxed text-black/70 md:text-lg">

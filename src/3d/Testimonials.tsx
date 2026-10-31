@@ -18,6 +18,9 @@ import {
     ArrowLeft,
     ArrowRight,
 } from "lucide-react";
+import { Lens } from "@/components/velora/lens";
+import { BorderBeam } from "@/components/velora/border-beam";
+import { GlowingEffect } from "@/components/velora/glowing-effect";
 
 // --------------------------------------------------
 // Types
@@ -35,7 +38,7 @@ export interface EngineeringPractice {
 }
 
 interface TestimonialsProps {
-    practices?: EngineeringPractice[];
+    practices?: any[];
     intro?: string;
 }
 
@@ -54,6 +57,8 @@ const skins = [
         sub: "text-black/60",
         badge: "bg-teal-50 text-teal-700",
         bullet: "text-teal-600",
+        colorFrom: "teal",
+        colorTo: "teal"
     },
     {
         card: "bg-black text-white",
@@ -61,6 +66,8 @@ const skins = [
         sub: "text-white/60",
         badge: "bg-white/10 text-teal-300",
         bullet: "text-teal-400",
+        colorFrom: "white",
+        colorTo: "white"
     },
     {
         card: "bg-teal-500 text-black",
@@ -68,6 +75,8 @@ const skins = [
         sub: "text-black/65",
         badge: "bg-black/10 text-black",
         bullet: "text-black",
+        colorFrom: "white",
+        colorTo: "white"
     },
 ] as const;
 
@@ -202,8 +211,9 @@ function PracticeCardContent({
     const Icon = practice.icon;
 
     return (
-        <article className="flex h-full flex-col p-5 sm:p-7 md:p-9">
 
+        <article className="flex h-full flex-col p-5 sm:p-7 md:p-9">
+            <BorderBeam size={64} duration={6} colorFrom={skin.colorFrom} colorTo={skin.colorTo} />
             {/* Header */}
             <div className="flex items-start justify-between gap-4">
 
@@ -364,6 +374,7 @@ function PracticeCarousel({
                         onDragEnd={handleDragEnd}
                         className={`relative min-h-[480px] overflow-hidden rounded-2xl shadow-2xl shadow-black/15 sm:rounded-3xl md:min-h-[540px] ${skin.card}`}
                     >
+                        <GlowingEffect />
                         <PracticeCardContent
                             practice={activePractice}
                             skin={skin}

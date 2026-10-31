@@ -24,6 +24,11 @@
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --radius: 0.625rem;
+  --brand: oklch(0.546 0.245 263);
+    --brand-from: oklch(0.546 0.245 263);
+    --brand-from: oklch(0.546 0.245 263);
+    --brand-via: oklch(0.623 0.214 260);
+    --brand-to: oklch(0.685 0.169 237);
 }
 
 @theme inline {
@@ -46,6 +51,10 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --radius: var(--radius);
+  --color-brand: var(--brand);
+    --color-brand-from: var(--brand-from);
+    --color-brand-via: var(--brand-via);
+    --color-brand-to: var(--brand-to);
 }
 
 @layer base {
@@ -56,4 +65,10 @@
                 body {
                   @apply bg-background text-foreground;
                 }
+}
+.dark {
+  --brand: oklch(0.623 0.214 260);
+  --brand-from: oklch(0.623 0.214 260);
+  --brand-via: oklch(0.707 0.165 255);
+  --brand-to: oklch(0.746 0.16 233);
 }

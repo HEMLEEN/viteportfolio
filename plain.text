@@ -1,0 +1,4 @@
+ npx shadcn@latest add https://velora.colorlib.com/r/lens.json    
+ npx shadcn@latest add https://velora.colorlib.com/r/pointer-highlight.json
+ npx shadcn@latest add https://velora.colorlib.com/r/border-beam.json
+ npx shadcn@latest add https://velora.colorlib.com/r/glowing-effect.json
